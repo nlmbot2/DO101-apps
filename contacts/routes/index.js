@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { pgconn } = require('../db/config')
 
-/* Show home page. */ change 5
+/* Show home page. */ change 5,6
 router.get('/', function(req, res) {
   // we first check if the 'contacts' table exists
   pgconn.query("SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'contacts')", function(err,results) {
